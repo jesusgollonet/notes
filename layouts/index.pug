@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        title= title
+    body 
+        !=contents
+        ul 
+            each p in posts
+                li
+                    a(href=p.path)= p.title
