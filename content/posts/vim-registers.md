@@ -26,8 +26,4 @@ specifies the formatting, but what does `put =` do?
 ** :help :put **
 > Put the text [from register x] after [line] (default current line).
 
-I kow there are a ton of registers and I know they have to do with copy / paste,
-but no idea about register x. Searching vim help for register x doesn't yield
-anything, and helpg <F12>
-
 [1]: http://vim.wikia.com/wiki/Insert_current_date_or_time
