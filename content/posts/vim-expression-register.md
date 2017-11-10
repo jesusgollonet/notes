@@ -48,8 +48,9 @@ register. I was initially confused thinking that `=strftime('%c')` or
 Nope. In the expression above `put` expects a register and `=strftime('%c')`
 acts like one.
 
-While researching this I found this video about expression registers that
+While researching this I found this [video about vim's expression registers][2] that
 illuminated expression registers and a few old cryptic commands I'd stumbled
 upon in the past. 
 
-[1]: http://vim.wikia.com/wiki/Insert_current_date_or_time
+[1]: http://vim.wikia.com/wiki/Insert_current_date_or_time "Vim wiki insert current date and time"
+[2]: https://vimeo.com/7035132 "Derek Wyatt on Vim registers"
