@@ -3,6 +3,7 @@ var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
 var layouts = require('metalsmith-layouts');
 var permalinks = require('metalsmith-permalinks');
+var helpers = require('metalsmith-register-helpers');
 
 Metalsmith(__dirname)
     .metadata({
@@ -11,16 +12,25 @@ Metalsmith(__dirname)
         generator: 'Metalsmith',
         url: 'https://jesusgollo.net/notes'
     })
-    .source('./src')
+    .source('./content')
     .destination('./build')
     .clean(false)
-    .use(collections({ posts: { pattern: 'posts/*.md', sortBy: 'date' } }))
-    .use(console.log)
+    .use(
+        collections({
+            posts: { pattern: 'posts/*.md', sortBy: 'date', reverse: true }
+        })
+    )
     .use(markdown())
     .use(permalinks())
     .use(
+        helpers({
+            directory: './templates/helpers'
+        })
+    )
+    .use(
         layouts({
-            engine: 'pug'
+            engine: 'handlebars',
+            default: 'post.html'
         })
     )
     .build(function(err) {

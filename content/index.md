@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: index.pug
+layout: index.html
 ---
 
 # Notes

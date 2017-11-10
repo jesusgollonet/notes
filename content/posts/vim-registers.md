@@ -1,5 +1,5 @@
 ---
-title: vim registers
+title: vim expression register
 date: 2017-11-09 13:03:00
 ---
 
@@ -21,10 +21,10 @@ I got the following snippet from the [vim wiki][1]:
 `:put =strftime('%c')`
 
 Ok strftime looks like a c-like function to generate time and '%c' probably
-specifies the formatting, but what does put = do?
+specifies the formatting, but what does `put =` do?
 
-### :help put 
-> ["x]p  Put the text [from register x] after the cursor [count] times.
+** :help :put **
+> Put the text [from register x] after [line] (default current line).
 
 I kow there are a ton of registers and I know they have to do with copy / paste,
 but no idea about register x. Searching vim help for register x doesn't yield
