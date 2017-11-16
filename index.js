@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var Metalsmith = require('metalsmith');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
@@ -7,14 +9,13 @@ var helpers = require('metalsmith-register-helpers');
 
 Metalsmith(__dirname)
     .metadata({
-        title: 'Notes',
-        description: 'Raw thoughts. Usually software but who knows',
-        generator: 'Metalsmith',
-        url: 'https://jesusgollo.net/notes'
+        title: process.env.TITLE,
+        description: process.env.DESCRIPTION,
+        url: process.env.URL
     })
-    .source('./content')
+    .source(process.env.CONTENT_FOLDER)
     .destination('./build')
-    .clean(false)
+    .clean(true)
     .use(
         collections({
             posts: { pattern: 'posts/*.md', sortBy: 'date', reverse: true }
