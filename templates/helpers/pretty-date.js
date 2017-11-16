@@ -3,7 +3,7 @@ module.exports = function(date) {
     return (
         shortMonthName(date.getMonth()) +
         ' ' +
-        date.getDay() +
+        date.getDate() +
         ', ' +
         date.getFullYear()
     );
