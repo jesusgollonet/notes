@@ -1,5 +1,5 @@
 ---
-title: around-the-time-it-clicks
+title: Around the time it clicks
 date: 2017-11-16 13:01:27
 draft: true
 ---
@@ -11,14 +11,15 @@ I want to  document what I learn about publicly for 2 main reasons:
   also benefit me in the future.
 
 I've found the best time to document something is around the time it clicks,
-either before it does or right after. In that sense I'm making the act of
-writing here as frictionless as possible. Wherever I am in my computer I should
-be able to quickly create or edit a note and publish it. I have a few ideas on
-how to do that. So far what i've implemented 2:
+either before it does or right after. In that sense I'm striving to make the act
+of writing here as frictionless as possible. Wherever I am in my computer I
+should be able to quickly create or edit a note and publish it. I have a few
+ideas on how to do that. So far what i've implemented 2:
 
-- Create a Notes folder in my home directory with only the markdown files.
-  Whenever I open the finder I can see it without the noise of all the blogging
+- The list of notes lives in the `~/Notes` folder in my home directory.
+  Whenever I open the finder I can see it without the noise of the blogging
   engine.
-- Create a `note` script that, from any location on the terminal, will get me to
-  that directory, create a markdown fie ith prepopulated frontmatter and open .   
+- I have a `note` script that, from any location on the terminal, will create in
+  that directory a markdown file with prepopulated frontmatter and open it in
+  vim.   
 
